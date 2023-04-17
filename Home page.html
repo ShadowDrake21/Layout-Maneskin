@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Oswald&family=Russo+One&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="content">
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <ul class="menu__list menu__left">
+                <li class="menu__item"><a class="menu__link link--active" href="Home%20page.html">Головна</a></li>
+                <li class="menu__item"><a class="menu__link" href="News.html">Новини</a></li>
+                <li class="menu__item"><a class="menu__link" href="Members.html">Учасники</a></li>
+            </ul>
+            <a class="logo" href="Home%20page.html"><img class="logo__img"
+                                                         src="img/common/maneskin-logo.png" alt="maneskin-logo"></a>
+            <ul class="menu__list menu__right">
+                <li class="menu__item"><a class="menu__link" href="Discography.html">Дискографія</a></li>
+                <li class="menu__item"><a class="menu__link" href="Tour.html">Турне</a></li>
+                <li class="menu__item"><a class="menu__link" href="Merch.html">Мерч</a></li>
+            </ul>
+            <ul class="menu__list menu__list-responsive" id="menu__responsive">
+                <li class="menu__item"><a class="menu__link link--active" href="Home%20page.html">Головна</a></li>
+                <li class="menu__item"><a class="menu__link" href="News.html">Новини</a></li>
+                <li class="menu__item"><a class="menu__link" href="Members.html">Учасники</a></li>
+                <li class="menu__item"><a class="menu__link" href="Discography.html">Дискографія</a></li>
+                <li class="menu__item"><a class="menu__link" href="Tour.html">Турне</a></li>
+                <li class="menu__item"><a class="menu__link" href="Merch.html">Мерч</a></li>
+            </ul>
+            <a class="menu__responsive-btn" onclick="menuPopup()">
+                <span class="menu__responsive-btn__line"></span>
+                <span class="menu__responsive-btn__line"></span>
+                <span class="menu__responsive-btn__line"></span>
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="first__screen">
+        <div class="first__screen-inner">
+            <div class="container">
+                <div class="first__screen-logo"><img class="first__screen-logo__img"
+                                                     src="img/HomePage/first-screen-logo.png" alt="Måneskin"></div>
+                <div class="first__screen-description">
+                    <p class="first__screen-description__paragraph">
+                        Офіційний україномовний сайт рок-групи, яка захопила світ своєю творчістю</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="important__news section">
+        <div class="container">
+            <h3 class="important__news-title title">Важливі новини</h3>
+            <div class="important__news-gallery">
+                <a class="important__news-gallery__item" href="#">
+                    <img class="important__news-gallery__item-img" src="img/HomePage/news-section-1.jpg" alt="news">
+                    <h5 class="important__news-gallery__item-title">Новий сингл «MAMMAMIA» вже ДОСТУПНИЙ на всіх
+                        музичних сервісах!</h5>
+                </a>
+                <a class="important__news-gallery__item" href="#">
+                    <img class="important__news-gallery__item-img" src="img/HomePage/news-section-2.jpg" alt="news">
+                    <h5 class="important__news-gallery__item-title">Måneskin на American Music Awards 2021. ЯК ЦЕ
+                        БУЛО?</h5>
+                </a>
+                <a class="important__news-gallery__item" href="#">
+                    <img class="important__news-gallery__item-img" src="img/HomePage/news-section-3.jpg" alt="news">
+                    <h5 class="important__news-gallery__item-title">Дати европейської частини турне «LOUD KIDS ON
+                        TOUR» на 2022 вже в мережі</h5>
+                </a>
+                <a class="important__news-gallery__item" href="#">
+                    <img class="important__news-gallery__item-img" src="img/HomePage/news-section-4.jpg" alt="news">
+                    <h5 class="important__news-gallery__item-title">Måneskin отримали 318 балів від глядачів та
+                        перемогли на ЕВРОБАЧЕННІ-2021!</h5>
+                </a>
+            </div>
+            <button class="important__news-btn section__btn" type="button">Інші новини</button>
+        </div>
+    </section>
+
+    <section class="tour__prewatch section">
+        <div class="container">
+            <h3 class="tour__prewatch-title title">Турне</h3>
+            <div class="tour__prewatch-content">
+                <div class="tour__prewatch-content__left-wrapper">
+                    <div class="tour__prewatch-content__left">
+                        <div class="tour__prewatch-content__left-date">
+                            <div class="tour__prewatch-content__left-date__inner">
+                                <p class="tour__prewatch-content__left-date__text">6 лютого, 2022 року | Лондон,
+                                    Англія</p>
+                                <p class="tour__prewatch-content__left-date__text">O2 Academy Brixton </p>
+                            </div>
+                            <button class="tour__prewatch-content__left-date__btn tour__btn sold__out">SOLD OUT
+                            </button>
+                        </div>
+                        <div class="tour__prewatch-content__left-date">
+                            <div class="tour__prewatch-content__left-date__inner">
+                                <p class="tour__prewatch-content__left-date__text">10 лютого, 2022 року | Брюссель,
+                                    Бельгія</p>
+                                <p class="tour__prewatch-content__left-date__text">Forest National</p>
+                            </div>
+                            <button class="tour__prewatch-content__left-date__btn tour__btn sold__out">SOLD OUT
+                            </button>
+                        </div>
+                        <div class="tour__prewatch-content__left-date">
+                            <div class="tour__prewatch-content__left-date__inner">
+                                <p class="tour__prewatch-content__left-date__text">12 лютого, 2022 року | Люксембург,
+                                    Люксембург</p>
+                                <p class="tour__prewatch-content__left-date__text">Rockhal - Esch-sur</p>
+                            </div>
+                            <button class="tour__prewatch-content__left-date__btn tour__btn">BUY</button>
+                        </div>
+                        <div class="tour__prewatch-content__left-date">
+                            <div class="tour__prewatch-content__left-date__inner">
+                                <p class="tour__prewatch-content__left-date__text">15 лютого, 2022 року | Варшава,
+                                    Польща</p>
+                                <p class="tour__prewatch-content__left-date__text">Torwar Hall</p>
+                            </div>
+                            <button class="tour__prewatch-content__left-date__btn tour__btn sold__out">SOLD OUT
+                            </button>
+                        </div>
+                        <div class="tour__prewatch-content__left-date">
+                            <div class="tour__prewatch-content__left-date__inner">
+                                <p class="tour__prewatch-content__left-date__text">17 лютого, 2022 року | Вена,
+                                    Австрія</p>
+                                <p class="tour__prewatch-content__left-date__text">Stadthalle</p>
+                            </div>
+                            <button class="tour__prewatch-content__left-date__btn tour__btn">BUY</button>
+                        </div>
+                        <div class="tour__prewatch-content__left-date">
+                            <div class="tour__prewatch-content__left-date__inner">
+                                <p class="tour__prewatch-content__left-date__text">21 лютого, 2022 року | Париж,
+                                    Франція</p>
+                                <p class="tour__prewatch-content__left-date__text">Le Zenith</p>
+                            </div>
+                            <button class="tour__prewatch-content__left-date__btn tour__btn sold__out">SOLD OUT
+                            </button>
+
+                        </div>
+                        <div class="tour__prewatch-content__left-date">
+                            <div class="tour__prewatch-content__left-date__inner">
+                                <p class="tour__prewatch-content__left-date__text">24 лютого, 2022 року | Цюрих,
+                                    Швейцарія</p>
+                                <p class="tour__prewatch-content__left-date__text">Halle 622 </p>
+                            </div>
+                            <button class="tour__prewatch-content__left-date__btn tour__btn sold__out">SOLD OUT
+                            </button>
+
+                        </div>
+                    </div>
+                    <button class="tour__prewatch-content__left-btn section__btn">Більше дат</button>
+                </div>
+                <div class="tour__prewatch-content__right">
+                    <img class="tour__prewatch-content__right-img" src="img/HomePage/tour-aside.jpg"
+                         alt="Måneskin tour">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="performances section">
+        <div class="container">
+            <h3 class="performances__title title">Нещодавні виступи та музичні відео</h3>
+            <div class="performances__gallery">
+                <a class="performances__gallery-item" href="#">
+                    <img class="performances__gallery-item__img" src="img/HomePage/music-1.jpg"
+                         alt="latest band's content">
+                    <p class="performances__gallery-item__title">Måneskin - Zitti E Buoni - Italy 🇮🇹 - Official Music
+                        Video -
+                        Eurovision 2021</p>
+                </a>
+                <a class="performances__gallery-item" href="#">
+                    <img class="performances__gallery-item__img" src="img/HomePage/music-2.jpg"
+                         alt="latest band's content">
+                    <p class="performances__gallery-item__title">Måneskin - Zitti E Buoni - Italy 🇮🇹 - Grand Final -
+                        Eurovision
+                        2021</p>
+                </a>
+                <a class="performances__gallery-item" href="#">
+                    <img class="performances__gallery-item__img" src="img/HomePage/music-3.jpg"
+                         alt="latest band's content">
+                    <p class="performances__gallery-item__title">Måneskin - MAMMAMIA (Lyric Video)</p>
+                </a>
+            </div>
+            <button class="performances__btn section__btn">Більше відео</button>
+        </div>
+    </section>
+
+    <section class="main__gallery section">
+        <div class="container">
+            <h3 class="main__gallery-title title">Фотогалерея групи</h3>
+            <div class="main__gallery-content">
+                <img class="main__gallery-content__img main__gallery-content__img-1" src="img/HomePage/gallery-1.jpg"
+                     alt="gallery photo">
+                <img class="main__gallery-content__img main__gallery-content__img-2" src="img/HomePage/gallery-2.jpg"
+                     alt="gallery photo">
+                <img class="main__gallery-content__img main__gallery-content__img-3" src="img/HomePage/gallery-3.jpg"
+                     alt="gallery photo">
+                <img class="main__gallery-content__img main__gallery-content__img-4" src="img/HomePage/gallery-4.jpg"
+                     alt="gallery photo">
+                <img class="main__gallery-content__img main__gallery-content__img-5" src="img/HomePage/gallery-5.jpg"
+                     alt="gallery photo">
+            </div>
+            <button class="main__gallery-btn section__btn">Більше фото</button>
+        </div>
+    </section>
+
+    <section class="instagram section">
+        <div class="container">
+            <h3 class="instagram__title title">Måneskin в Instagram</h3>
+            <div class="instagram__link-wrapper">
+                <a class="instagram__link" href="#">
+                <span class="instagram__link-img__inner circle__shape">
+                    <img class="instagram__link-img circle__shape-img" src="img/HomePage/instagram_main.jpg"
+                         alt="Måneskin instagram">
+                </span>
+                    <span class="instagram__link-nickname">@maneskinofficial</span>
+                </a>
+            </div>
+            <ul class="instagram__list">
+                <li class="instagram__list-item">
+                    <p class="instagram__list-item__title">Даміано:</p>
+                    <a class="instagram__list-item__link instagram__link" href="#">
+                        <span class="instagram__list-item__link-img__inner circle__shape">
+                        <img class="instagram__list-item__link-img instagram__link-img circle__shape-img"
+                             src="img/HomePage/instagram-1.jpg" alt="Damiano instagram">
+                            </span>
+                        <span class="instagram__list-item__link-nickname instagram__link-nickname">@ykaaar</span>
+                    </a>
+                </li>
+                <li class="instagram__list-item">
+                    <p class="instagram__list-item__title">Вікторія:</p>
+                    <a class="instagram__list-item__link instagram__link" href="#">
+                        <span class="instagram__list-item__link-img__inner circle__shape">
+                        <img class="instagram__list-item__link-img instagram__link-img circle__shape-img"
+                             src="img/HomePage/instagram-2.jpg" alt="Victoria instagram">
+                            </span>
+                        <span class="instagram__list-item__link-nickname instagram__link-nickname">@vicdeangelis</span>
+                    </a>
+                </li>
+                <li class="instagram__list-item instagram__logo">
+                    <img class="intagram_list-item__img instagram__logo-img" src="img/HomePage/instagram-logo.png"
+                         alt="band logo">
+                </li>
+                <li class="instagram__list-item">
+                    <p class="instagram__list-item__title">Томас:</p>
+                    <a class="instagram__list-item__link instagram__link" href="#">
+                        <span class="instagram__list-item__link-img__inner circle__shape">
+                        <img class="instagram__list-item__link-img instagram__link-img circle__shape-img"
+                             src="img/HomePage/instagram-3.jpg" alt="Thomas instagram">
+                            </span>
+                        <span class="instagram__list-item__link-nickname instagram__link-nickname">@thomasraggi__</span>
+                    </a>
+                </li>
+                <li class="instagram__list-item">
+                    <p class="instagram__list-item__title">Ітан:</p>
+                    <a class="instagram__list-item__link instagram__link" href="#">
+                        <span class="instagram__list-item__link-img__inner circle__shape">
+                        <img class="instagram__list-item__link-img instagram__link-img circle__shape-img"
+                             src="img/HomePage/instagram-4.jpg" alt="Ethan instagram">
+                        </span>
+                        <span class="instagram__list-item__link-nickname instagram__link-nickname">@ethaneskin</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="container">
+            <div class="footer__bar">
+                <ul class="footer__bar-list">
+                    <li class="footer__bar-list__item"><a class="footer__bar-item__link" href="#">Допомога</a></li>
+                    <li class="footer__bar-list__item"><a class="footer__bar-item__link" href="#">Про сайт</a></li>
+                    <li class="footer__bar-list__item"><a class="footer__bar-item__link" href="#">Політика
+                        конфіденційності</a></li>
+                    <li class="footer__bar-list__item"><a class="footer__bar-item__link" href="#">Правила та умови</a>
+                    </li>
+                    <li class="footer__bar-list__item"><a class="footer__bar-item__link" href="#">Використання файлів
+                        cookie</a></li>
+                </ul>
+            </div>
+            <div class="footer__autographs">
+                <ul class="footer__autographs-list">
+                    <li class="footer__autographs-list__item"><img class="footer__autographs-list__item-img"
+                                                                   src="img/common/1autograph%201.svg"
+                                                                   alt="Damiano's sign">
+                    </li>
+                    <li class="footer__autographs-list__item"><img class="footer__autographs-list__item-img"
+                                                                   src="img/common/2autograph%202.svg"
+                                                                   alt="Victoria's sign"></li>
+                    <li class="footer__autographs-list__item"><img class="footer__autographs-list__item-img
+                     footer__autographs-list__item-logo" src="img/common/maneskin-logo.png" alt=""></li>
+                    <li class="footer__autographs-list__item"><img class="footer__autographs-list__item-img"
+                                                                   src="img/common/3autograph%203.svg"
+                                                                   alt="Thomas' sign">
+                    </li>
+                    <li class="footer__autographs-list__item"><img class="footer__autographs-list__item-img"
+                                                                   src="img/common/4autograph%204.svg"
+                                                                   alt="Ethan's sign">
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__copyright">
+                <p class="footer__copyright-text">© Måneskin 2021</p>
+                <p class="footer__copyright-text">Made by Krapyvianskii Dmytro, PI-211</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    function menuPopup() {
+        var x = document.getElementById('menu__responsive')
+        if (x.className === 'menu__list menu__list-responsive') {
+            x.className += ' responsive'
+        } else {
+            x.className = 'menu__list menu__list-responsive'
+        }
+    }
+</script>
+</body>
+</html>

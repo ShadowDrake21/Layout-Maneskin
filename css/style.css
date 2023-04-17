@@ -1,0 +1,1814 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+/*font-family: 'Forum', cursive;*/
+
+/*font-family: 'Oswald', sans-serif;*/
+
+/*font-family: 'Russo One', sans-serif;*/
+
+/* common */
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    color: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Russo One', sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    padding: 13px 0;
+    top: 0;
+    background-color: rgba(87, 87, 87, 0.5);
+    z-index: 99;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0 62px;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+    gap: 0 90px;
+}
+
+.menu__link.link--active {
+    border-bottom: 1px solid #ffffff;
+}
+
+.menu__list-responsive {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: -319px;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.8);
+    transform: translateX(-200%);
+    transition: transform 0.7s ease-in-out;
+}
+
+.menu__list-responsive .menu__item {
+    width: 100%;
+    text-align: center;
+}
+
+.menu__list-responsive .menu__item .menu__link {
+    padding: 10px 0;
+    margin: 0 -10px;
+    width: 100%;
+    border: 1px solid #C4C4C4;
+}
+
+.menu__responsive-btn {
+    position: absolute;
+    display: none;
+    right: 10px;
+    top: 15px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.menu__responsive-btn__line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 17px;
+    background-color: #ffffff;
+}
+
+.section {
+    padding-top: 20px;
+}
+
+.first__section {
+    padding-top: 140px;
+}
+
+.title {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section__btn {
+    background-color: #FF1010;
+    margin: 20px auto 0;
+    display: block;
+    border-radius: 20px;
+    max-width: 330px;
+    width: 100%;
+    height: 55px;
+    border: none;
+    font-size: inherit;
+}
+
+.tour__btn {
+    background-color: #FF0000;
+    border: 1px solid #000000;
+
+}
+
+.sold__out {
+    background-color: #C4C4C4;
+    border: 1px solid #ffffff;
+}
+
+.quote__paragraph {
+    font-family: 'Forum', cursive;
+}
+
+.quote__by {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.tabs__item {
+    font-size: 20px;
+    color: #C4C4C4;
+}
+
+.tabs__item.tab-active {
+    position: relative;
+    padding-bottom: 1px;
+    color: #ffffff;
+}
+
+.tabs__item.tab-active::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: 1px;
+    background-color: #ffffff;
+}
+
+/* Сторінка Home page */
+
+.first__screen {
+    height: 100vh;
+}
+
+.first__screen-inner {
+    position: relative;
+    background-image: url("../img/HomePage/first-screen.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+}
+
+.first__screen-inner::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.first__screen-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first__screen-description {
+    position: relative;
+    height: 100vh;
+}
+
+.first__screen-description__paragraph {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.important__news-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.important__news-gallery__item {
+    max-width: 505px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.important__news-gallery__item-title {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.tour__prewatch-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour__prewatch-content__left-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 100px;
+}
+
+.tour__prewatch-content__left-date {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.tour__prewatch-content__left-date::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.tour__prewatch-content__left-date:last-child::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.tour__prewatch-content__left-date__text {
+    font-size: 20px;
+}
+
+.tour__prewatch-content__left-date__btn {
+    width: 150px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.tour__prewatch-content__left-btn {
+    margin: 20px 0 0;
+}
+
+.performances__gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.performances__gallery-item {
+    max-width: 388px;
+}
+
+.performances__gallery-item__title {
+    text-align: center;
+}
+
+.main__gallery-content {
+    display: grid;
+    grid-template-columns: 408px 416px 525px;
+    grid-template-rows: 256px 500px;
+    grid-template-areas:
+            "A B E"
+            "C D E";
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.main__gallery-content__img-1 {
+    grid-area: A;
+}
+
+.main__gallery-content__img-2 {
+    grid-area: B;
+    justify-self: end;
+}
+
+.main__gallery-content__img-3 {
+    grid-area: C;
+}
+
+.main__gallery-content__img-4 {
+    grid-area: D;
+}
+
+.main__gallery-content__img-5 {
+    grid-area: E;
+}
+
+.instagram {
+    padding-bottom: 60px;
+}
+
+.circle__shape {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.circle__shape-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.instagram__link-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.instagram__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.instagram__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.instagram__list-item {
+    max-width: 200px;
+}
+
+.instagram__logo {
+    max-width: 222px;
+}
+
+.instagram__list-item__title {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.instagram__link-nickname {
+    font-size: 20px;
+}
+
+.footer {
+    font-size: 20px;
+}
+
+.footer__inner {
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../img/common/footer-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+}
+
+.footer__bar-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__autographs-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright {
+    text-align: center;
+}
+
+/* Сторінка News */
+.news {
+    padding-bottom: 30px;
+}
+
+.news__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px 20px;
+    margin-top: 40px;
+}
+
+.news__cards-item {
+    max-width: 330px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.news__cards-item__img-wrapper {
+    display: inline-block;
+    width: 330px;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.news__cards-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* Сторінка Members */
+.all__members-cards {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.all__members-cards__item {
+    max-width: 280px;
+    text-align: center;
+}
+
+.all__members-cards__item-img {
+    display: block;
+}
+
+.all__members-cards__item-title {
+    font-size: 24px;
+}
+
+.all__members-cards__item.all__members-special {
+    max-width: 303px;
+}
+
+.all__members-cards__item.all__members-special .all__members-cards__item-inner:last-child {
+    width: 303px;
+}
+
+.all__members-quote__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.all__members-quote {
+    max-width: 880px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.member {
+    padding-bottom: 15px;
+}
+
+.member__composition-item__wrapper {
+    display: flex;
+    margin-top: 15px;
+    gap: 17px;
+}
+
+.member__composition-item__wrapper-special {
+    margin-top: 8px;
+}
+
+.member__composition-item {
+    display: block;
+}
+
+.member__composition-text {
+    font-family: 'Forum', cursive;
+    font-size: 35px;
+}
+
+.member__composition-text__paragraph {
+    text-indent: 2ch;
+    padding-bottom: 5px;
+}
+
+.leader__composition-text {
+    margin-right: 50px;
+}
+
+.member__composition-item__img-wrapper {
+    display: flex;
+    gap: 17px;
+}
+
+.bassist__composition-text {
+    margin-left: 15px;
+    text-align: right;
+}
+
+.guitarist__composition-text .member__composition-text__paragraph:first-child {
+    max-width: 78%;
+    margin-top: -100px;
+}
+
+.drummer__composition-text{
+    margin-left: -5px;
+    text-align: right;
+}
+
+.member__text-quote {
+    margin: 40px 0 0 0;
+}
+
+.photos__together {
+    padding-bottom: 30px;
+}
+
+.photos__together-gallery {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+}
+
+.photos__together-gallery__row {
+    display: grid;
+    justify-content: center;
+    overflow: hidden;
+    column-gap: 11px;
+}
+
+.photos__together-gallery__row-1 {
+    grid-template-columns: 500px 360px 498px;
+    grid-template-rows: 333px;
+    grid-template-areas: "A B C";
+}
+
+.photos__together-gallery__row-2 {
+    grid-template-columns: 313px 732px 313px;
+    grid-template-rows: 412px;
+    grid-template-areas: "D E F";
+}
+
+.photos__together-gallery__row-3 {
+    grid-template-columns: 461px 452px 445px;
+    grid-template-rows: 307px;
+    grid-template-areas: "J H I";
+}
+
+.photos__together-gallery__item-1 {
+    grid-area: A;
+}
+
+.photos__together-gallery__item-2 {
+    grid-area: B;
+}
+
+.photos__together-gallery__item-3 {
+    grid-area: C;
+}
+
+.photos__together-gallery__item-4 {
+    grid-area: D;
+}
+
+.photos__together-gallery__item-5 {
+    grid-area: E;
+}
+
+.photos__together-gallery__item-6 {
+    grid-area: F;
+}
+
+.photos__together-gallery__item-7 {
+    grid-area: J;
+}
+
+.photos__together-gallery__item-8 {
+    grid-area: H;
+}
+
+.photos__together-gallery__item-9 {
+    grid-area: I;
+}
+
+
+
+/* Сторінка Discography */
+.discography {
+    padding-bottom: 30px;
+}
+
+.discography__title {
+    margin-bottom: 30px;
+}
+
+.tabs__container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.discography__tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.discography__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 10px;
+}
+
+.discography__cards-item {
+    position: relative;
+    max-width: 250px;
+    cursor: pointer;
+}
+
+.discography__cards-item:hover .discography__cards-item__hover{
+    opacity: 1;
+}
+
+.discography__cards-item__hover{
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.discography__cards-item__img {
+    display: block;
+}
+
+/* Сторінка Tour */
+.tour {
+    padding-bottom: 30px;
+}
+
+.tour__title {
+    margin-bottom: 30px;
+}
+
+.tour__tabs {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+}
+
+.tour__europe-poster {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tour__europe-text {
+    font-family: 'Forum', cursive;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tour__europe-dates {
+    margin-bottom: 30px;
+}
+
+.tour__europe-dates__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.tour__europe-dates__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.tour__europe-dates__item:last-child::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.tour__europe-dates__item-btn {
+    width: 250px;
+    padding: 15px 20px;
+    font-size: 26px;
+}
+
+.tour__europe-share__title {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.tour__europe-share__list {
+    display: flex;
+    align-items: center;
+}
+
+.tour__europe-share__list-item {
+    margin-right: 40px;
+}
+
+.tour__europe-share__list-item__link:last-child {
+    margin-right: 0;
+}
+
+/* Сторінка Merch */
+.merch__categories {
+    padding-bottom: 35px;
+}
+
+.merch__categories-title {
+    margin-bottom: 30px;
+}
+
+.merch__categories-groups {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.merch__categories-groups__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 280px;
+    width: 100%;
+}
+
+.merch__categories-groups__item.merch__categories--active .merch__categories-groups__item-product{
+    border-color: #FF0000;
+}
+
+.merch__categories-groups__item-product {
+    width: 100%;
+    height: 340px;
+    background-color: #C4C4C4;
+    border: 6px solid #F2F2F2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.merch__categories-groups__item-product__img {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.merch__categories-groups__item-card__title {
+    max-width: 245px;
+    text-align: center;
+}
+
+.full__category {
+    padding-bottom: 40px;
+}
+
+.full__category-title {
+    font-size: 24px;
+}
+
+.full__category-filter {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.full__category-filter__item {
+    position: relative;
+    background-color: transparent;
+    color: #C4C4C4;
+    border: none;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.full__category-filter__item:first-child {
+    padding-right: 26px;
+}
+
+.full__category-filter__item:first-child::after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Merch/arrow-filter.svg");
+    top: 0;
+    right: 0;
+}
+
+.full__category-filter__item.filter--active {
+    color: #FAFAFA;
+}
+
+.full__category-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 55px;
+    margin-bottom: 40px;
+}
+
+.full__category-cards__item {
+    position: relative;
+    max-width: 230px;
+    max-height: 265px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.full__category-cards__item-product {
+    width: 100%;
+    height: 265px;
+    background-color: #C4C4C4;
+    border: 6px solid #F2F2F2;
+    text-align: center;
+}
+
+.full__category-cards__item:hover .full__category-cards__item-hover{
+    opacity: 1;
+}
+
+.full__category-cards__item-hover{
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* адаптивність */
+@media (max-width: 1400px) {
+    .logo {
+        margin: 0 30px;
+    }
+
+    .menu__list {
+        gap: 0 60px;
+    }
+
+    .tour__prewatch-content__left-wrapper {
+        margin-right: 50px;
+    }
+
+    .tour__prewatch-content__left-date__text {
+        font-size: 18px;
+    }
+
+    .tour__prewatch-content__right-img {
+        max-width: 350px;
+    }
+
+    .main__gallery-content {
+        grid-template-columns: 310px 322px 449px;
+        grid-template-rows: 203px 439px;
+        justify-content: center;
+    }
+
+    .main__gallery-content__img,
+    .photos__together-gallery__item {
+        width: 100%;
+    }
+
+    .footer__autographs-list__item-img {
+        max-width: 200px;
+    }
+
+    .member__composition-text,
+    .tour__europe-text {
+        font-size: 31px;
+    }
+
+    .leader__composition-text {
+        max-width: 800px;
+        margin-right: 20px;
+    }
+
+    .member__composition-item__img {
+        max-width: 100%;
+    }
+
+    .bassist__composition-text,
+    .drummer__composition-text {
+        max-width: 950px;
+    }
+
+    .guitarist__composition .member__composition-item__wrapper {
+        justify-content: center;
+    }
+
+    .guitarist__composition .member__composition-item__wrapper .member__composition-item:last-child {
+        display: none;
+    }
+
+    .guitarist__composition-text .member__composition-text__paragraph:first-child {
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .guitarist__composition-text {
+        margin-top: 8px;
+    }
+
+    .photos__together-gallery__row-1 {
+        grid-template-columns: 450px 323px 445px;
+        grid-template-rows: 298px;
+    }
+
+    .photos__together-gallery__row-2 {
+        grid-template-columns: 275px 666px 275px;
+        grid-template-rows: 365px;
+    }
+
+    .photos__together-gallery__row-3 {
+        grid-template-columns: 410px 404px 400px;
+        grid-template-rows: 273px;
+    }
+
+    .tour__europe-poster__img {
+        max-width: 100%;
+    }
+
+    .merch__categories-groups__item {
+        max-width: 240px;
+    }
+
+    .merch__categories-groups__item-product {
+        height: 280px;
+    }
+
+    .merch__categories-groups__item-product__img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .leader__composition .member__composition-item__wrapper:last-child {
+        flex-direction: column;
+    }
+
+    .member__composition-item__img-wrapper {
+        justify-content: center;
+    }
+
+    .leader__composition-text {
+        max-width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .member__composition-item__wrapper-special {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .member__composition-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .bassist__composition-text {
+        margin-left: 0;
+    }
+
+    .photos__together-gallery__row-1 {
+        grid-template-columns: 380px 275px 380px;
+        grid-template-rows: 253px;
+    }
+
+    .photos__together-gallery__row-2 {
+        grid-template-columns: 240px 550px 240px;
+        grid-template-rows: 310px;
+    }
+
+    .photos__together-gallery__row-3 {
+        grid-template-columns: 350px 345px 333px;
+        grid-template-rows: 233px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .menu__list {
+        gap: 0 15px;
+    }
+
+    .logo {
+        margin: 0 10px;
+    }
+
+    .tour__prewatch-content__left-wrapper {
+        margin-right: 10px;
+    }
+
+    .tour__prewatch-content__left-date__btn {
+        width: 120px;
+        font-size: 18px;
+    }
+
+    .performances__gallery {
+        justify-content: space-around;
+    }
+
+    .performances__gallery-item {
+        margin-bottom: 10px;
+    }
+
+    .main__gallery-content {
+        grid-template-columns: 240px 240px 353px;
+        grid-template-rows: 150px 350px;
+    }
+
+    .instagram__logo {
+        display: none;
+    }
+
+    .footer {
+        font-size: 18px;
+    }
+
+    .footer__autographs-list__item-img {
+        max-width: 150px;
+    }
+
+    .all__members-cards__item,
+    .all__members-cards__item.all__members-special {
+        width: 235px;
+    }
+
+    .all__members-cards__item.all__members-special .all__members-cards__item-inner:last-child {
+        width: 235px;
+    }
+
+    .all__members-cards__item-img {
+        max-width: 200px;
+    }
+
+    .all__members-cards__item-title {
+        font-size: 22px;
+    }
+
+    .member__composition-text,
+    .tour__europe-text {
+        font-size: 28px;
+    }
+
+    .photos__together-gallery__row-1 {
+        grid-template-columns: 320px 230px 320px;
+        grid-template-rows: 215px;
+    }
+
+    .photos__together-gallery__row-2 {
+        grid-template-columns: 200px 470px 200px;
+        grid-template-rows: 263px;
+    }
+
+    .photos__together-gallery__row-3 {
+        grid-template-columns: 287px 295px 287px;
+        grid-template-rows: 192px;
+    }
+
+    .tour__europe-share__title {
+        font-size: 24px;
+    }
+
+    .full__category-cards {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .logo {
+        margin: 0 auto;
+    }
+
+    .menu__list {
+        position: absolute;
+        flex-direction: column;
+    }
+
+    .menu__left,
+    .menu__right {
+        display: none;
+    }
+
+    .menu__link.link--active {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .menu__responsive-btn {
+        display: block;
+    }
+
+    .menu__list-responsive.responsive {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .first__screen-description__paragraph {
+        font-size: 20px;
+    }
+
+    .first__screen-logo__img {
+        width: 500px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .important__news-gallery__item,
+    .performances__gallery-item__title {
+        font-size: 20px;
+    }
+
+    .tour__prewatch-content__left-wrapper {
+        margin-right: 0;
+    }
+
+    .tour__prewatch-content__left-btn {
+        margin: 20px auto 0;
+    }
+
+    .tour__prewatch-content__right {
+        display: none;
+    }
+
+    .main__gallery-content {
+        grid-template-columns: 207px 215px 290px;
+        grid-template-rows: 135px 272px;
+    }
+
+    .instagram__list-item__title {
+        font-size: 22px;
+    }
+
+    .instagram__link-nickname {
+        font-size: 18px;
+    }
+
+    .footer__bar-list {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .footer__bar-list__item {
+        margin-bottom: 10px;
+    }
+
+    .news__cards {
+        margin-top: 20px;
+    }
+
+    .all__members-cards {
+        margin-top: 25px;
+    }
+
+    .all__members-cards__item-title {
+        font-size: 22px;
+    }
+
+    .all__members-quote {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+
+    .member__composition-text,
+    .tour__europe-text {
+        font-size: 26px;
+    }
+
+    .bassist__composition .member__composition-item__wrapper:first-child .member__composition-item:last-child {
+        display: none;
+    }
+
+    .drummer__composition .member__composition-item__wrapper:first-child .member__composition-item:last-child {
+        display: none;
+    }
+
+    .photos__together-gallery__row-3,
+    .photos__together-gallery__item-2,
+    .photos__together-gallery__item-4,
+    .photos__together-gallery__item-6{
+        display: none;
+    }
+
+    .photos__together-gallery__row-1 {
+        grid-template-areas: "A C";
+        grid-template-columns: 320px 320px;
+    }
+
+    .photos__together-gallery__row-2 {
+        grid-template-columns: 650px;
+        grid-template-rows: 365px;
+        grid-template-areas: "E";
+    }
+
+    .discography__title {
+        margin-bottom: 20px;
+    }
+    .tabs__item {
+        font-size: 18px;
+    }
+
+    .news,
+    .photos__together,
+    .discography,
+    .tour,
+    .full__category {
+        padding-bottom: 20px;
+    }
+
+    .discography__tabs {
+        display: flex;
+        margin-bottom: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discography__tabs-item {
+        margin-bottom: 15px;
+    }
+
+    .tour__tabs {
+        gap: 100px;
+    }
+
+    .tour__europe-text {
+        margin-bottom: 20px;
+    }
+
+    .tour__europe-dates__item {
+        padding: 10px 0;
+    }
+
+    .tour__europe-dates__item-info {
+        font-size: 20px;
+    }
+
+    .tour__europe-dates__item-btn {
+        width: 200px;
+        padding: 10px 10px;
+        font-size: 24px;
+    }
+
+    .tour__europe-share__title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .tour__europe-share__list {
+        justify-content: center;
+    }
+
+    .merch__categories {
+        padding-bottom: 25px;
+    }
+
+    .merch__categories-title {
+        margin-bottom: 20px;
+    }
+
+    .merch__categories-groups {
+        row-gap: 15px;
+    }
+
+    .merch__categories-groups__item {
+        max-width: 200px;
+        font-size: 22px;
+    }
+
+    .merch__categories-groups__item-product {
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .full__category {
+        padding-bottom: 30px;
+    }
+
+    .full__category-cards {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .important__news-gallery__item {
+        max-width: 400px;
+        margin-bottom: 10px;
+    }
+
+    .important__news-gallery__item-img {
+        max-width: 400px;
+    }
+
+    .section__btn {
+        max-width: 300px;
+        font-size: 20px;
+    }
+
+    .main__gallery-content {
+        grid-template-areas: "A B" "C D" "E E";
+        grid-template-columns: 207px 215px;
+        grid-template-rows: 135px 258px auto;
+    }
+
+    .instagram {
+        padding-bottom: 45px;
+    }
+
+    .footer__autographs-list__item-img {
+        max-width: 100px;
+    }
+
+    .news__cards {
+        gap: 15px 15px;
+    }
+
+    .first__section {
+        padding-top: 120px;
+    }
+
+    .all__members-cards__item.all__members-special .all__members-cards__item-inner:last-child {
+        width: 220px;
+    }
+
+    .all__members-cards__item-title {
+        font-size: 20px;
+    }
+
+    .member__composition-text,
+    .tour__europe-text {
+        font-size: 24px;
+    }
+
+    .drummer__composition-text .member__text-quote {
+        margin: 25px 0 0 0;
+    }
+
+    .tour__title {
+        margin-bottom: 20px;
+    }
+
+    .tour__tabs {
+        margin-bottom: 15px;
+    }
+
+    .tour__europe-poster {
+        margin-bottom: 10px;
+    }
+
+    .tour__europe-dates {
+        margin-bottom: 20px;
+    }
+
+    .tour__europe-dates__item-info {
+        font-size: 18px;
+    }
+
+    .tour__europe-dates__item-btn {
+        width: 150px;
+        padding: 5px 5px;
+        font-size: 22px;
+    }
+
+    .tour__europe-share__title {
+        font-size: 20px;
+    }
+
+    .tour__europe-share__list-item {
+        margin-right: 30px;
+    }
+
+    .full__category-filter {
+        justify-content: center;
+    }
+
+    .full__category-filter__item {
+        font-size: 18px;
+    }
+
+    .full__category-cards {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tour__prewatch-content__left-date__inner {
+        margin-bottom: 10px;
+    }
+
+    .tour__prewatch-content__left-date {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tour__prewatch-content__left-date__btn {
+        width: 100%;
+    }
+
+    .instagram {
+        padding-bottom: 30px;
+    }
+
+    .footer__inner {
+        padding-top: 15px;
+    }
+
+    .all__members-cards {
+        margin-top: 15px;
+    }
+
+    .all__members-quote {
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+    .member__composition-item__wrapper,
+    .member__composition-item__img-wrapper {
+        gap: 10px;
+    }
+
+    .leader__composition .member__composition-item__wrapper:first-child,
+    .bassist__composition .member__composition-item__wrapper:first-child,
+    .guitarist__composition .member__composition-item__wrapper,
+    .drummer__composition .member__composition-item__wrapper:first-child {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .drummer__composition-text .member__text-quote {
+        margin: 15px 0 10px 0;
+    }
+
+    .photos__together-gallery__row-1 {
+        display: flex;
+        overflow: hidden;
+        column-gap: 0;
+        flex-direction: column;
+        row-gap: 11px;
+    }
+
+    .photos__together-gallery__row-2 {
+        display: flex;
+    }
+
+    .discography__cards {
+        justify-content: center;
+    }
+
+    .tour__europe-text {
+        margin-bottom: 10px;
+    }
+
+    .tour__europe-dates__item {
+        flex-direction: column;
+    }
+
+    .tour__europe-dates__item-info {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .tour__europe-dates__item-button {
+        width: 100%;
+    }
+
+    .tour__europe-dates__item-btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tour__europe-share__title {
+        font-size: 18px;
+    }
+
+    .tour__europe-share__list-item {
+        margin-right: 20px;
+    }
+
+    .merch__categories-groups__item {
+        font-size: 20px;
+    }
+
+    .full__category-cards {
+        margin-bottom: 20px;
+    }
+
+    .discography__cards-item__hover,
+    .full__category-cards__item-hover {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 620px) {
+    .logo__img {
+        width: 180px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .menu__responsive-btn {
+        top: 5px;
+    }
+
+    .first__screen-inner {
+        background-image: url("../img/Responsive/first-screen_Home-page.jpg");
+    }
+
+    .first__screen-logo__img {
+        width: 300px;
+    }
+
+    .first__screen-description__paragraph {
+        display: none;
+    }
+
+    .instagram {
+        padding-bottom: 20px;
+    }
+
+    .footer__autographs-list__item {
+        margin-bottom: 10px;
+    }
+
+    .footer__autographs-list__item-img {
+        display: none;
+    }
+
+    .footer__autographs-list__item-logo {
+        display: block;
+        max-width: 200px;
+    }
+
+    .member__composition-item__wrapper {
+        margin-top: 10px;
+    }
+
+    .drummer__composition-text .member__text-quote {
+        margin: 15px 0 10px 0;
+    }
+
+    .tour__tabs {
+        flex-direction: column;
+        align-items: center;
+        column-gap: 0;
+        row-gap: 10px;
+    }
+
+    .merch__categories-title {
+        margin-bottom: 10px;
+    }
+
+    .merch__categories {
+        padding-bottom: 15px;
+    }
+
+    .full__category-filter {
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .full__category-filter__item {
+        margin-bottom: 5px;
+    }
+
+    .full__category-cards {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .first__section {
+        padding-top: 110px;
+    }
+
+    .important__news-gallery__item,
+    .important__news-gallery__item-img,
+    .performances__gallery-item,
+    .performances__gallery-item__img {
+        max-width: 340px;
+    }
+
+    .important__news-gallery__item,
+    .performances__gallery-item__title,
+    .news__cards-item {
+        font-size: 18px;
+    }
+
+    .section__btn,
+    .tour__prewatch-content__left-btn {
+        max-width: 280px;
+        font-size: 18px;
+        margin: 15px auto 0;
+    }
+
+    .tour__prewatch-content__left-btn {
+        margin: 15px auto 0;
+    }
+
+    .tour__prewatch-content__left-date__text {
+        font-size: 16px;
+    }
+
+    .main__gallery-content {
+        grid-template-areas: "A" "B" "C" "D" "E";
+        grid-template-columns: 340px;
+        grid-template-rows: repeat(5,auto);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    .instagram {
+        padding-bottom: 10px;
+    }
+
+    .instagram__list-item__title {
+        font-size: 20px;
+    }
+
+    .instagram__link-nickname {
+        font-size: 16px;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+
+    .all__members-cards {
+        justify-content: center;
+    }
+
+    .all__members-quote {
+        font-size: 18px;
+    }
+
+    .member__composition-text,
+    .tour__europe-text {
+        font-size: 22px;
+    }
+
+    .tabs__item {
+        font-size: 16px;
+    }
+
+    .discography__cards {
+        gap: 15px;
+        padding-bottom: 5px;
+    }
+
+    .news,
+    .photos__together,
+    .discography,
+    .tour,
+    .full__category {
+        padding-bottom: 10px;
+    }
+
+    .tour__title,
+    .tour__tabs,
+    .tour__europe-dates {
+        margin-bottom: 10px;
+    }
+
+    .tour__europe-share__list-item {
+        margin-right: 15px;
+    }
+
+    .merch__categories-groups {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .merch__categories-groups__item {
+        font-size: 18px;
+    }
+
+    .full__category-cards {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .instagram__list {
+        justify-content: center;
+    }
+
+    .member__composition-text,
+    .tour__europe-text {
+        font-size: 20px;
+    }
+
+    .merch__categories {
+        padding-bottom: 10px;
+    }
+}
